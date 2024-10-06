@@ -21,6 +21,8 @@ This script processes flow log data (assumed to be in a text file format) and ge
 * dstport (destination port) and protocol_name (derived from protocol number) form a unique key in the lookup table. Multiple unique keys can share the same associated tag.
 * Case-sensitivity for dstport and protocol_name is irrelevant due to stripping leading/trailing spaces before processing and converting protocol names to lowercase for tag lookups.
 
+**Testing**
+* For the purpose of self testing, the function has been modified to accept `flow_logs` files both as a `txt` flow log file as well as a `csv`. As for the purpose of testing on large data, I tested the source code on a `csv` flow log data file, sized (5MB and 10MB). This large log file has also been committed and is present in the project directory.
 
 
 **Run the script**
@@ -49,7 +51,8 @@ Output:
 
 **Global Variables (Optimization Strategy)**
 
-The script leverages global variables `protocols` (mapping protocol numbers to names) and `lookup_table` (mapping dstport-protocol combinations to tags) to potentially save space during execution. However, we can consider passing these objects as function arguments when the script complexity increases or readability becomes a concern. 
+* The script leverages global variables `protocols` (mapping protocol numbers to names) and `lookup_table` (mapping dstport-protocol combinations to tags) to potentially save space during execution. However, we can consider passing these objects as function arguments when the script complexity increases or readability becomes a concern.
+* Large data files are usually taken as a `csv`, this questions provides the `flow_logs` as a `txt` but we modified it to support both formats as a optimal coding strategy.
 
 **Code Structure**
 
