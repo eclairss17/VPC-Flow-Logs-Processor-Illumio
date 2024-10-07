@@ -9,8 +9,8 @@ This script processes flow log data (assumed to be in a text file format) and ge
 
 **Requirements**
 
-* Python 3.x ([https://www.python.org/downloads/](https://www.python.org/downloads/))
-* Standard library `csv` module, no dependencies are required to be installed in order to run the project
+* Python 3.x ([https://www.python.org/downloads/](https://www.python.org/downloads/)), locally used python 3.9.6.
+* Standard library `csv` module, no dependencies are required to be installed in order to run the project.
 
 
 **Assumptions**
