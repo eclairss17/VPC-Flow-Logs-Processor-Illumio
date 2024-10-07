@@ -22,7 +22,7 @@ This script processes flow log data (assumed to be in a text file format) and ge
 * Case-sensitivity for dstport and protocol_name is irrelevant due to stripping leading/trailing spaces before processing and converting protocol names to lowercase for tag lookups.
 
 **Testing**
-* For the purpose of self testing, the function has been modified to accept `flow_logs` files both as a `txt` flow log file as well as a `csv`. As for the purpose of testing on large data, I tested the source code on a `csv` flow log data file, sized (5MB and 10MB). This large log file has also been committed and is present in the project directory.
+* For the purpose of self testing, the function has been modified to accept `flow_logs` files both as a `txt` flow log file as well as a `csv`. As for the purpose of testing on large data, I tested the source code on a `csv` flow log data file, sized (5MB and 10MB). This large log file has also been committed and is present in the project directory as `vpc_logs_5mb.csv`.
 
 
 **Run the script**
