@@ -17,7 +17,7 @@ This script processes flow log data (assumed to be in a text file format) and ge
 
 * The flow log data resides in a text file named flow_logs.txt within the same directory as this script.
 * The lookup table (mapping dstport-protocol combinations to tags) exists as a CSV file named lookup_table.csv in the same directory.
-* The flow log data is clean and consistent, adhering to AWS VPC log requirements. This source code supports all the protocol types listed under AWS VPC logs ([here.](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml))
+* The flow log data is clean and consistent, adhering to AWS VPC log requirements. **This source code supports all the protocol types listed under AWS VPC logs** ([here.](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml))
 * dstport (destination port) and protocol_name (derived from protocol number) form a unique key in the lookup table. Multiple unique keys can share the same associated tag.
 * Case-sensitivity for dstport and protocol_name is irrelevant due to stripping leading/trailing spaces before processing and converting protocol names to lowercase for tag lookups.
 
